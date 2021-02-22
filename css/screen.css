@@ -1,0 +1,42 @@
+html {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+body {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 5% auto
+}
+h1 {
+  grid-column-start: 2;
+  grid-row: 2;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+form ul {
+  list-style-type: none;
+}
+form li {
+  margin-top: 1.5em;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    grid-template-columns: 5% repeat(8, 10%) 5%;
+  }
+  h1 {
+    grid-column-end: 6;
+  }
+  form {
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    grid-column-end: 10;
+  }
+
+}
+
