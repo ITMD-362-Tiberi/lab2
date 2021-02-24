@@ -17,8 +17,6 @@ h1 {
   background-color: rgb(186,218,238);
 }
 form {
-  display: flex;
-  flex-direction: column;
   grid-column-start: 2;
   grid-row-start: 3;
   border-radius: 1em;
@@ -26,10 +24,13 @@ form {
   background-color: rgb(186,218,238);
 }
 form ul {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
 }
 form li {
   margin-top: 1.5em;
+  align-self: flex-start;
 }
 
 button {
@@ -48,11 +49,17 @@ button {
     grid-column-end: 8;
   }
   form {
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
-    grid-column-end: 6;
+    grid-column-end: 7;
   }
-
+  form ul {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  form li {
+    flex-basis: auto;
+    margin-right: 1em;
+    align-self: center;
+  }
 }
 
